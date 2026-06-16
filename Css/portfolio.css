@@ -1,0 +1,66 @@
+/* portfolio.css — Portfolio page specific styles */
+.portfolio-item {
+  transition: all 0.3s ease;
+}
+.portfolio-img-wrap {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 16/10;
+  background: var(--clr-surface2);
+}
+.portfolio-img-wrap .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(79, 124, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition);
+  gap: 0.75rem;
+}
+.portfolio-img-wrap:hover .overlay {
+  opacity: 1;
+}
+.overlay-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-accent);
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: none;
+  transition: transform var(--transition);
+}
+
+.overlay-btn:hover {
+    transform: scale(1.1);
+}
+.blog-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  background: rgba(79, 124, 255, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+.modal-content {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+}
+.modal-header {
+  border-color: var(--clr-border);
+}
+.modal-title {
+  font-family: var(--font-display);
+}
