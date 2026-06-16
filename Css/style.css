@@ -1,0 +1,530 @@
+/* ============================================================
+   NexaWeb Agency — style.css (GLOBAL)
+   Navbar, Footer, Buttons, Variables, Utilities
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap");
+
+/* ── CSS Variables ─────────────────────────────────────────── */
+:root {
+  --clr-bg: #0a0a0f;
+  --clr-surface: #111118;
+  --clr-surface2: #1a1a24;
+  --clr-border: #2a2a3a;
+  --clr-text: #e8e8f0;
+  --clr-muted: #8888aa;
+  --clr-accent: #4f7cff;
+  --clr-accent2: #7c5cff;
+  --clr-success: #22c55e;
+  --clr-danger: #ef4444;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "Space Mono", monospace;
+  --sp-xs: 0.5rem;
+  --sp-sm: 1rem;
+  --sp-md: 2rem;
+  --sp-lg: 4rem;
+  --sp-xl: 7rem;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --transition: 0.25s ease;
+  --transition-slow: 0.45s ease;
+}
+
+[data-theme="light"] {
+  --clr-bg: #f5f5fa;
+  --clr-surface: #ffffff;
+  --clr-surface2: #eeeef6;
+  --clr-border: #d0d0e0;
+  --clr-text: #111118;
+  --clr-muted: #555570;
+}
+
+/* ── Reset ─────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+body {
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  transition:
+    background-color var(--transition),
+    color var(--transition);
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+a {
+  color: var(--clr-accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+a:hover {
+  color: var(--clr-accent2);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--clr-text);
+}
+
+/* ── Utilities ──────────────────────────────────────────────── */
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.section-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  margin-bottom: 1rem;
+}
+.text-accent {
+  color: var(--clr-accent) !important;
+}
+.text-muted {
+  color: var(--clr-muted) !important;
+}
+.bg-surface {
+  background-color: var(--clr-surface) !important;
+}
+.bg-surface2 {
+  background-color: var(--clr-surface2) !important;
+}
+.section-pad {
+  padding: var(--sp-xl) 0;
+}
+.section-pad-sm {
+  padding: var(--sp-lg) 0;
+}
+.grad-text {
+  background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Buttons ────────────────────────────────────────────────── */
+.btn-nexa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition);
+}
+.btn-nexa-primary {
+  background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent2));
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(79, 124, 255, 0.3);
+}
+.btn-nexa-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(79, 124, 255, 0.45);
+  color: #fff;
+}
+.btn-nexa-outline {
+  background: transparent;
+  color: var(--clr-accent);
+  border: 1.5px solid var(--clr-accent);
+}
+.btn-nexa-outline:hover {
+  background: var(--clr-accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ── Navbar ─────────────────────────────────────────────────── */
+.nexa-navbar {
+  background-color: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--clr-border);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color var(--transition);
+}
+[data-theme="light"] .nexa-navbar {
+  background-color: rgba(245, 245, 250, 0.88);
+}
+.nexa-navbar .navbar-brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--clr-text) !important;
+}
+.nexa-navbar .navbar-brand span {
+  color: var(--clr-accent);
+}
+.nexa-navbar .nav-link {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--clr-muted) !important;
+  padding: 0.4rem 0.85rem !important;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+}
+.nexa-navbar .nav-link:hover,
+.nexa-navbar .nav-link.active {
+  color: var(--clr-text) !important;
+  background: var(--clr-surface2);
+}
+#themeToggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--clr-border);
+  background: var(--clr-surface2);
+  color: var(--clr-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-size: 1rem;
+}
+#themeToggle:hover {
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+}
+
+/* ── Page Header (inner pages) ──────────────────────────────── */
+.page-header {
+  background: var(--clr-surface);
+  border-bottom: 1px solid var(--clr-border);
+  padding: var(--sp-lg) 0 var(--sp-md);
+  position: relative;
+  overflow: hidden;
+}
+.page-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--clr-accent),
+    transparent
+  );
+}
+.breadcrumb-nexa {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+.breadcrumb-nexa a {
+  font-size: 0.82rem;
+  color: var(--clr-muted);
+}
+.breadcrumb-nexa span {
+  font-size: 0.82rem;
+  color: var(--clr-muted);
+}
+.breadcrumb-nexa .current {
+  color: var(--clr-accent);
+}
+
+/* ── Cards ──────────────────────────────────────────────────── */
+.nexa-card {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-md);
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+  height: 100%;
+}
+.nexa-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--clr-accent);
+  box-shadow: 0 12px 40px rgba(79, 124, 255, 0.12);
+}
+.nexa-card .icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background: rgba(79, 124, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  color: var(--clr-accent);
+}
+.nexa-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.nexa-card p {
+  font-size: 0.9rem;
+  color: var(--clr-muted);
+  margin: 0;
+}
+.icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background: rgba(79, 124, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  color: var(--clr-accent);
+}
+
+/* ── Stats Bar ──────────────────────────────────────────────── */
+.stats-bar {
+  border-top: 1px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
+  background: var(--clr-surface);
+  padding: var(--sp-md) 0;
+}
+.stat-item {
+  text-align: center;
+  padding: var(--sp-sm);
+}
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--clr-accent);
+  display: block;
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--clr-muted);
+  margin-top: 0.3rem;
+}
+
+/* ── Scroll Reveal ──────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Toast ──────────────────────────────────────────────────── */
+.nexa-toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 9999;
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-left: 4px solid var(--clr-success);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.5rem;
+  min-width: 280px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transform: translateX(120%);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+}
+.nexa-toast.show {
+  transform: translateX(0);
+}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.nexa-footer {
+  background: var(--clr-surface);
+  border-top: 1px solid var(--clr-border);
+  padding: var(--sp-lg) 0 var(--sp-md);
+}
+.footer-brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--clr-text);
+  margin-bottom: 0.75rem;
+}
+.footer-brand span {
+  color: var(--clr-accent);
+}
+.footer-desc {
+  font-size: 0.88rem;
+  color: var(--clr-muted);
+  max-width: 240px;
+}
+.footer-heading {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clr-muted);
+  margin-bottom: 1rem;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+.footer-links a {
+  font-size: 0.88rem;
+  color: var(--clr-muted);
+  transition: color var(--transition);
+}
+.footer-links a:hover {
+  color: var(--clr-accent);
+}
+.footer-bottom {
+  border-top: 1px solid var(--clr-border);
+  margin-top: var(--sp-md);
+  padding-top: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.footer-bottom p {
+  font-size: 0.82rem;
+  color: var(--clr-muted);
+  margin: 0;
+}
+
+/* ── Social Links ───────────────────────────────────────────── */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.social-link {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--clr-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-muted);
+  font-size: 0.85rem;
+  transition: all var(--transition);
+}
+.social-link:hover {
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+  background: rgba(79, 124, 255, 0.1);
+}
+
+/* ── Filter Buttons ─────────────────────────────────────────── */
+.filter-btns {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.filter-btn {
+  padding: 0.45rem 1.1rem;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  border: 1.5px solid var(--clr-border);
+  background: transparent;
+  color: var(--clr-muted);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+  background: rgba(79, 124, 255, 0.1);
+}
+
+/* ── Search ─────────────────────────────────────────────────── */
+.nexa-search {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.nexa-search input {
+  width: 100%;
+  background: var(--clr-surface);
+  border: 1.5px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  padding: 0.8rem 1rem 0.8rem 2.8rem;
+  color: var(--clr-text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: border-color var(--transition);
+  outline: none;
+}
+.nexa-search input:focus {
+  border-color: var(--clr-accent);
+}
+.nexa-search .search-icon {
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--clr-muted);
+  pointer-events: none;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  .stats-bar .row > div {
+    border-bottom: 1px solid var(--clr-border);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
