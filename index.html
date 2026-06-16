@@ -3,11 +3,394 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cat 2 project </title>
+    <title>NexaWeb Agency - Digital Growth Studio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+
+    <!-- Using bootstrap 5-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Custom styles -->
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <!-- This is a simple HTML file for the cat 2 project -->
-     <!-- so we are implementing a digital growth studio done by 171599 Harshvir singh ahuja-->
+     <!-- so i am implementing a digital growth studio done by  myself 171599 Harshvir singh ahuja-->
+                            <!-- NAVBAR SECTION-->
+    <nav class="nexa-navbar navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Nexa<span>Web</span></a>
+
+            <!---->
+            <div class="d-flex align-items-center gap-2 order-lg-last">
+                <button id="themeToggle" aria-label="Toggle theme">
+                    <i id="themeIcon" class="bi bi-sun-fill"></i>
+                </button>
+                <!---->
+                <a href="contact.html" class="btn-nexa btn-nexa-primary d-none d-lg-inline-flex">
+                    <i class="bi bi-arrow-up-right"></i> Start a Project
+                </a>
+                <!---->
+                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+              <i class="bi bi-list fs-4" style="color:var(--clr-text)"></i>
+                 </button>
+        </div>
+
+
+        <!---->
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav mx-auto gap-1">
+         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="testimonials.html">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+
+    <!---------------------------- HERO SECTION ----------------------------------------- -->
+    <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-bg-glow"></div>
+    <div class="container">
+      <div class="row align-items-center gy-5">
+
+        <div class="col-lg-6 hero-content">
+          <div class="hero-eyebrow">Digital Agency — Est. 2019</div>
+          <h1 class="hero-title">
+            We Build Products<br>
+            That <span class="grad-text">Actually Scale</span>
+          </h1>
+          <p class="hero-desc">
+            Strategy, design, and engineering for companies that refuse to be average.
+            From MVP to enterprise — we ship fast and we ship right.
+          </p>
+          <div class="hero-cta">
+            <a href="portfolio.html" class="btn-nexa btn-nexa-primary">
+              <i class="bi bi-grid-3x3-gap"></i> View Our Work
+            </a>
+            <a href="about.html" class="btn-nexa btn-nexa-outline">
+              Our Story <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Currently accepting projects for Q3 2026
+          </div>
+        </div>
+
+        <div class="col-lg-6 hero-visual">
+          <div class="code-window">
+            <div class="code-window-bar">
+              <span class="dot dot-r"></span>
+              <span class="dot dot-y"></span>
+              <span class="dot dot-g"></span>
+              <span style="color:var(--clr-muted);font-family:var(--font-mono);font-size:0.75rem;margin-left:0.5rem">nexaweb/app.js</span>
+            </div>
+            <div class="code-window-body">
+              <div><span class="code-cm">// NexaWeb — shipping great products</span></div>
+              <div>&nbsp;</div>
+              <div><span class="code-kw">const</span> <span class="code-fn">launch</span> = <span class="code-kw">async</span> (project) => {</div>
+              <div>&nbsp; <span class="code-kw">const</span> strategy = <span class="code-kw">await</span> <span class="code-fn">define</span>(project.goals);</div>
+              <div>&nbsp; <span class="code-kw">const</span> design   = <span class="code-kw">await</span> <span class="code-fn">craft</span>(strategy);</div>
+              <div>&nbsp; <span class="code-kw">const</span> product  = <span class="code-kw">await</span> <span class="code-fn">build</span>(design, {</div>
+              <div>&nbsp;&nbsp;&nbsp; quality: <span class="code-str">"production"</span>,</div>
+              <div>&nbsp;&nbsp;&nbsp; timeline: <span class="code-str">"fast"</span>,</div>
+              <div>&nbsp;&nbsp;&nbsp; budget: project.budget</div>
+              <div>&nbsp; });</div>
+              <div>&nbsp; <span class="code-kw">return</span> <span class="code-fn">deploy</span>(product); <span class="code-cm">// 🚀</span></div>
+              <div>};</div>
+              <div>&nbsp;</div>
+              <div><span class="code-fn">launch</span>({ client: <span class="code-str">"YourCompany"</span>, goals: [</div>
+              <div>&nbsp; <span class="code-str">"10x revenue"</span>, <span class="code-str">"global reach"</span></div>
+              <div>]});</div>
+              <div>&nbsp;</div>
+              <div><span class="code-cm">// ✅ Project launched successfully</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!---------------------------- STATS Bar ----------------------------------------- -->
+  <section class="stats-bar">
+    <div class="container">
+        <div class="row g-0 text-center">
+            <div class="col-6 col-md-3 stat-item">
+                <span class="stat-number" data-target="127" data-suffix="+">0</span>
+                <div class="stat-label">Projects Delivered</div>
+            </div>
+
+         <div class="col-6 col-md-3 stat-item">
+          <span class="stat-number" data-target="98" data-suffix="%">0</span>
+          <div class="stat-label">Client Satisfaction</div>
+        </div>
+
+        <div class="col-6 col-md-3 stat-item">
+          <span class="stat-number" data-target="7" data-suffix=" yrs">0</span>
+          <div class="stat-label">In Business</div>
+        </div>
+
+        <div class="col-6 col-md-3 stat-item">
+          <span class="stat-number" data-target="24" data-suffix="">0</span>
+          <div class="stat-label">Team Members</div>
+        </div>
+        </div>
+    </div>
+  </section>
+
+  <!---------------------------- SERVICES PREVIEW ----------------------------------------- -->
+  <section class="section-pad">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-6">
+                <span class="section-label">What We Do</span>
+                <h2 class="Section-title">End-to-End Digital Services</h2>
+                <p class="text-muted">From idea to launch, we handle every layer of your digital product. </p>
+            </div>
+        </div>
+
+        <div class="row g-4" data-stagger>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="nexa-card">
+            <div class="icon-box"><i class="bi bi-palette2"></i></div>
+            <h4>UI/UX Design</h4>
+            <p>User-centred interfaces that convert. From wireframes to high-fidelity prototypes in Figma.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="nexa-card">
+            <div class="icon-box"><i class="bi bi-code-slash"></i></div>
+            <h4>Web Development</h4>
+            <p>React, Next.js, Node.js — clean, performant code with 99.9% uptime SLAs.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="nexa-card">
+            <div class="icon-box"><i class="bi bi-phone"></i></div>
+            <h4>Mobile Apps</h4>
+            <p>Cross-platform iOS & Android apps built with React Native and Flutter.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="nexa-card">
+            <div class="icon-box"><i class="bi bi-graph-up-arrow"></i></div>
+            <h4>Growth Marketing</h4>
+            <p>Data-driven SEO, paid media, and conversion optimisation that compounds over time.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="nexa-card">
+            <div class="icon-box"><i class="bi bi-cloud-check"></i></div>
+            <h4>Cloud & DevOps</h4>
+            <p>AWS, GCP, and Azure infrastructure. CI/CD pipelines and automated deployments.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="nexa-card">
+            <div class="icon-box"><i class="bi bi-robot"></i></div>
+            <h4>AI Integration</h4>
+            <p>LLMs, computer vision, and ML pipelines embedded directly into your product workflow.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="services.html" class="btn-nexa btn-nexa-outline">
+            Explore All Services <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!---------------------------- PROCESS ----------------------------------------- -->
+     <section class="section-pad" style="background:var(--clr-surface); border-top:1px solid var(--clr-border); border-bottom:1px solid var(--clr-border)">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-5">
+          <span class="section-label">How We Work</span>
+          <h2 class="section-title">A Process Built for Results</h2>
+          <p class="text-muted mb-4">No surprises, no scope creep. Just clear milestones and consistent delivery.</p>
+          <a href="about.html#process" class="btn-nexa btn-nexa-primary">
+            <i class="bi bi-play-circle"></i> See Full Process
+          </a>
+        </div>
+        <div class="col-lg-6 offset-lg-1">
+          <div class="process-step reveal">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h5>Discovery & Strategy</h5>
+              <p>We audit your market, define KPIs, and build a roadmap in week one.</p>
+            </div>
+          </div>
+          <div class="process-step reveal">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h5>Design & Prototype</h5>
+              <p>Figma prototypes, user testing, and design system creation before a single line of code.</p>
+            </div>
+          </div>
+          <div class="process-step reveal">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h5>Build & Ship</h5>
+              <p>Agile sprints, daily standups, and weekly demos. You're involved at every step.</p>
+            </div>
+          </div>
+          <div class="process-step reveal">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h5>Launch & Grow</h5>
+              <p>Deployment, monitoring, SEO, and ongoing optimisation after go-live.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!---------------------------SELECTED WORK------------------------------------------- -->
+  <section class="section-pad">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-5 flex-wrap gap-3">
+            <div>
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title mb-0">Selected Work</h2>
+            </div>
+            <a href="portfolio.html" class="btn-nexa btn-nexa-outline">
+                All Projects <i class="bi bi-arrow-right"></i>
+             </a>
+        </div>
+        <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="portfolio-img-wrap">
+            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,#1a1a2e,#16213e)">🛒</div>
+            <div class="overlay">
+              <a href="portfolio.html" class="overlay-btn" title="View Project"><i class="bi bi-eye"></i></a>
+              <a href="portfolio.html" class="overlay-btn" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+          </div>
+          <div class="mt-3">
+            <span class="blog-tag">E-commerce</span>
+            <h5 class="mt-1">ShopFlow — B2C Platform</h5>
+            <p class="text-muted" style="font-size:0.85rem">Next.js · Stripe · PostgreSQL</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="portfolio-img-wrap">
+            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,#0d1b2a,#1b263b)">📊</div>
+            <div class="overlay">
+              <a href="portfolio.html" class="overlay-btn" title="View Project"><i class="bi bi-eye"></i></a>
+              <a href="portfolio.html" class="overlay-btn" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+          </div>
+          <div class="mt-3">
+            <span class="blog-tag">SaaS</span>
+            <h5 class="mt-1">DataPulse — Analytics Dashboard</h5>
+            <p class="text-muted" style="font-size:0.85rem">React · D3.js · Node.js</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="portfolio-img-wrap">
+            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,#1a0533,#2d1b69)">🏥</div>
+            <div class="overlay">
+              <a href="portfolio.html" class="overlay-btn" title="View Project"><i class="bi bi-eye"></i></a>
+              <a href="portfolio.html" class="overlay-btn" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+          </div>
+          <div class="mt-3">
+            <span class="blog-tag">HealthTech</span>
+            <h5 class="mt-1">MediBook — Clinic Booking App</h5>
+            <p class="text-muted" style="font-size:0.85rem">React Native · Firebase</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!---------------------------CTA BANNER------------------------------------------- -->
+  <section class="section-pad-sm" style="background:var(--clr-surface);border-top:1px solid var(--clr-border)">
+    <div class="container">
+      <div class="text-center" style="max-width:600px;margin:0 auto">
+        <span class="section-label">Ready?</span>
+        <h2 class="section-title">Let's Build Something Great Together</h2>
+        <p class="text-muted mb-4">Tell us about your project. We'll respond within one business day.</p>
+        <a href="contact.html" class="btn-nexa btn-nexa-primary me-3">
+          <i class="bi bi-chat-dots"></i> Start a Conversation
+        </a>
+        <a href="services.html" class="btn-nexa btn-nexa-outline">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!---------------------------FOOTER------------------------------------------- -->
+<footer class="nexa-footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">Nexa<span>Web</span></div>
+          <p class="footer-desc">Digital products that scale. Strategy, design, and engineering for ambitious companies.</p>
+          <div class="social-links mt-3" style="justify-content:flex-start">
+            <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-github"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-dribbble"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-2 offset-lg-1">
+          <div class="footer-heading">Company</div>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-2">
+          <div class="footer-heading">Support</div>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-heading">Contact</div>
+          <ul class="footer-links">
+            <li><i class="bi bi-envelope me-2" style="color:var(--clr-accent)"></i>hello@nexaweb.io</li>
+            <li><i class="bi bi-telephone me-2" style="color:var(--clr-accent)"></i>+1 (415) 555-0192</li>
+            <li><i class="bi bi-geo-alt me-2" style="color:var(--clr-accent)"></i>San Francisco, CA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 NexaWeb Agency. All rights reserved.</p>
+        <p>Built with ❤️ and too much coffee.</p>
+      </div>
+    </div>
+  </footer>
     
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main JS -->
+  <script src="js/loader.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/filter.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/contact.js"></script>
 </body>
 </html>
