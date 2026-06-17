@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with NexaWeb Agency — tell us about your project." />
+  <title>Contact — NexaWeb Agency</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+  <nav class="nexa-navbar navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Nexa<span>Web</span></a>
+      <div class="d-flex align-items-center gap-2 order-lg-last">
+        <button id="themeToggle" aria-label="Toggle theme"><span id="themeIcon">☀️</span></button>
+        <a href="contact.html" class="btn-nexa btn-nexa-primary d-none d-lg-inline-flex"><i class="bi bi-arrow-up-right"></i> Start a Project</a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><i class="bi bi-list fs-4" style="color:var(--clr-text)"></i></button>
+      </div>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="testimonials.html">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb-nexa"><a href="index.html">Home</a><span>/</span><span class="current">Contact</span></div>
+      <span class="section-label">Get In Touch</span>
+      <h1 class="display-2">Let's Talk About<br>Your Project</h1>
+      <p class="text-muted mt-3" style="max-width:520px">We respond to every enquiry within one business day. No sales pitch — just an honest conversation about whether we're a good fit.</p>
+    </div>
+  </div>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="row gy-5">
+
+        <!-- Contact Form -->
+        <div class="col-lg-7">
+          <div class="nexa-card" style="padding:2.5rem">
+            <h3 class="mb-1" style="font-size:1.4rem">Send Us a Message</h3>
+            <p class="text-muted mb-4" style="font-size:0.9rem">Fill in the form and we'll get back to you within 24 hours.</p>
+
+            <form id="contactForm" class="form-nexa" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="contactName">Full Name *</label>
+                  <input type="text" class="form-control" id="contactName" placeholder="John Smith" />
+                  <div class="form-feedback" id="contactNameFeedback"></div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="contactEmail">Email Address *</label>
+                  <input type="email" class="form-control" id="contactEmail" placeholder="john@company.com" />
+                  <div class="form-feedback" id="contactEmailFeedback"></div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="contactService">Service You're Interested In *</label>
+                  <select class="form-select" id="contactService">
+                    <option value="">Select a service...</option>
+                    <option>UI/UX Design</option>
+                    <option>Web Development</option>
+                    <option>Mobile App Development</option>
+                    <option>Cloud & DevOps</option>
+                    <option>Growth Marketing</option>
+                    <option>AI Integration</option>
+                    <option>Full Product Build</option>
+                    <option>Other</option>
+                  </select>
+                  <div class="form-feedback" id="contactServiceFeedback"></div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="contactBudget">Estimated Budget</label>
+                  <select class="form-select" id="contactBudget">
+                    <option value="">Select range...</option>
+                    <option>Under $5,000</option>
+                    <option>$5,000 – $15,000</option>
+                    <option>$15,000 – $50,000</option>
+                    <option>$50,000+</option>
+                    <option>Let's discuss</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="contactTimeline">Timeline</label>
+                  <select class="form-select" id="contactTimeline">
+                    <option value="">Select timeline...</option>
+                    <option>ASAP</option>
+                    <option>1–3 months</option>
+                    <option>3–6 months</option>
+                    <option>Flexible</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="contactMessage">Tell Us About Your Project *</label>
+                  <textarea class="form-control" id="contactMessage" placeholder="Describe your project, goals, and any specific requirements..."></textarea>
+                  <div class="form-feedback" id="contactMessageFeedback"></div>
+                </div>
+                <div class="col-12 mt-2">
+                  <button type="submit" class="btn-nexa btn-nexa-primary w-100" style="justify-content:center;padding:1rem">
+                    <i class="bi bi-send"></i> Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-5">
+          <div class="mb-4">
+            <span class="section-label">Direct Contact</span>
+            <h3 class="section-title">Other Ways to Reach Us</h3>
+          </div>
+
+          <div class="d-flex flex-column gap-3 mb-5">
+            <div class="nexa-card" style="padding:1.25rem;flex-direction:row;display:flex;align-items:center;gap:1rem">
+              <div class="icon-box" style="margin:0;flex-shrink:0"><i class="bi bi-envelope"></i></div>
+              <div>
+                <div style="font-family:var(--font-display);font-weight:600;font-size:0.9rem">Email</div>
+                <a href="mailto:hello@nexaweb.io" style="font-size:0.85rem;color:var(--clr-muted)">hello@nexaweb.io</a>
+              </div>
+            </div>
+            <div class="nexa-card" style="padding:1.25rem;flex-direction:row;display:flex;align-items:center;gap:1rem">
+              <div class="icon-box" style="margin:0;flex-shrink:0"><i class="bi bi-telephone"></i></div>
+              <div>
+                <div style="font-family:var(--font-display);font-weight:600;font-size:0.9rem">Phone</div>
+                <a href="tel:+14155550192" style="font-size:0.85rem;color:var(--clr-muted)">+1 (415) 555-0192</a>
+              </div>
+            </div>
+            <div class="nexa-card" style="padding:1.25rem;flex-direction:row;display:flex;align-items:center;gap:1rem">
+              <div class="icon-box" style="margin:0;flex-shrink:0"><i class="bi bi-geo-alt"></i></div>
+              <div>
+                <div style="font-family:var(--font-display);font-weight:600;font-size:0.9rem">Office</div>
+                <span style="font-size:0.85rem;color:var(--clr-muted)">340 Pine Street, Suite 800<br>San Francisco, CA 94104</span>
+              </div>
+            </div>
+            <div class="nexa-card" style="padding:1.25rem;flex-direction:row;display:flex;align-items:center;gap:1rem">
+              <div class="icon-box" style="margin:0;flex-shrink:0"><i class="bi bi-clock"></i></div>
+              <div>
+                <div style="font-family:var(--font-display);font-weight:600;font-size:0.9rem">Hours</div>
+                <span style="font-size:0.85rem;color:var(--clr-muted)">Mon–Fri: 9am – 6pm PST<br>Response within 24 hours</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="nexa-card" style="background:linear-gradient(135deg,rgba(79,124,255,0.1),rgba(124,92,255,0.1));border-color:rgba(79,124,255,0.3)">
+            <div class="hero-badge-dot mb-3"></div>
+            <h5 style="font-size:1rem">Currently Accepting Projects</h5>
+            <p class="text-muted" style="font-size:0.85rem;margin:0.5rem 0 0">We have capacity for 2 new projects starting Q3 2026. Don't wait — slots fill fast.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="nexa-footer"><div class="container"><div class="row gy-4"><div class="col-lg-4"><div class="footer-brand">Nexa<span>Web</span></div><p class="footer-desc">Digital products that scale.</p></div><div class="col-sm-6 col-lg-2 offset-lg-1"><div class="footer-heading">Company</div><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li><li><a href="careers.html">Careers</a></li></ul></div><div class="col-sm-6 col-lg-2"><div class="footer-heading">Support</div><ul class="footer-links"><li><a href="contact.html">Contact</a></li><li><a href="faq.html">FAQ</a></li><li><a href="testimonials.html">Reviews</a></li></ul></div><div class="col-lg-3"><div class="footer-heading">Contact</div><ul class="footer-links"><li><i class="bi bi-envelope me-2" style="color:var(--clr-accent)"></i>hello@nexaweb.io</li><li><i class="bi bi-telephone me-2" style="color:var(--clr-accent)"></i>+1 (415) 555-0192</li><li><i class="bi bi-geo-alt me-2" style="color:var(--clr-accent)"></i>San Francisco, CA</li></ul></div></div><div class="footer-bottom"><p>© 2026 NexaWeb Agency. All rights reserved.</p><p>Built with ❤️ and too much coffee.</p></div></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/loader.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/filter.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
