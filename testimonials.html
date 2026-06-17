@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonials — NexaWeb Agency</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/testimonials.css" />
+  </head>
+  <body>
+    <nav class="nexa-navbar navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Nexa<span>Web</span></a>
+        <div class="d-flex align-items-center gap-2 order-lg-last">
+          <button id="themeToggle" aria-label="Toggle theme">
+            <span id="themeIcon">☀️</span>
+          </button>
+          <a
+            href="contact.html"
+            class="btn-nexa btn-nexa-primary d-none d-lg-inline-flex"
+            ><i class="bi bi-arrow-up-right"></i> Start a Project</a
+          >
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMenu"
+          >
+            <i class="bi bi-list fs-4" style="color: var(--clr-text)"></i>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto gap-1">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="testimonials.html">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="careers.html">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="page-header">
+      <div class="container">
+        <div class="breadcrumb-nexa">
+          <a href="index.html">Home</a><span>/</span
+          ><span class="current">Reviews</span>
+        </div>
+        <span class="section-label">Client Reviews</span>
+        <h1 class="display-2">Don't Take Our Word For It</h1>
+        <p class="text-muted mt-3" style="max-width: 520px">
+          98% client satisfaction across 127 projects. Here's what the people
+          we've worked with actually say.
+        </p>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <section class="stats-bar">
+      <div class="container">
+        <div class="row g-0 text-center">
+          <div class="col-6 col-md-3 stat-item">
+            <span class="stat-number" data-target="98" data-suffix="%">0</span>
+            <div class="stat-label">Satisfaction Rate</div>
+          </div>
+          <div class="col-6 col-md-3 stat-item">
+            <span class="stat-number" data-target="127" data-suffix="+">0</span>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="col-6 col-md-3 stat-item">
+            <span class="stat-number" data-target="94" data-suffix="%">0</span>
+            <div class="stat-label">Client Return Rate</div>
+          </div>
+          <div class="col-6 col-md-3 stat-item">
+            <span class="stat-number" data-target="4" data-suffix=".9★">0</span>
+            <div class="stat-label">Average Rating</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED CAROUSEL -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">Featured Reviews</span>
+          <h2 class="section-title">What Clients Say</h2>
+        </div>
+
+        <div
+          id="testimonialCarousel"
+          class="carousel slide mb-5"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="testimonial-card mx-auto" style="max-width: 700px">
+                <div class="stars mb-3">★★★★★</div>
+                <p class="testimonial-quote">
+                  NexaWeb didn't just build us a website — they rebuilt our
+                  entire digital strategy. Our organic traffic is up 340% in 6
+                  months and we're converting at nearly 5%. These guys are the
+                  real deal.
+                </p>
+                <div class="d-flex align-items-center gap-3 mt-4">
+                  <div class="avatar">TM</div>
+                  <div>
+                    <div
+                      style="font-family: var(--font-display); font-weight: 600"
+                    >
+                      Tom Mitchell
+                    </div>
+                    <div class="text-muted" style="font-size: 0.85rem">
+                      CEO, ShopFlow Inc.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial-card mx-auto" style="max-width: 700px">
+                <div class="stars mb-3">★★★★★</div>
+                <p class="testimonial-quote">
+                  We'd worked with 3 agencies before NexaWeb. None of them
+                  communicated like this team. Weekly updates, honest timelines,
+                  and they actually delivered ahead of schedule. Unheard of.
+                </p>
+                <div class="d-flex align-items-center gap-3 mt-4">
+                  <div
+                    class="avatar"
+                    style="
+                      background: linear-gradient(135deg, #ec4899, #8b5cf6);
+                    "
+                  >
+                    RL
+                  </div>
+                  <div>
+                    <div
+                      style="font-family: var(--font-display); font-weight: 600"
+                    >
+                      Rachel Lee
+                    </div>
+                    <div class="text-muted" style="font-size: 0.85rem">
+                      CTO, MediBook Health
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial-card mx-auto" style="max-width: 700px">
+                <div class="stars mb-3">★★★★★</div>
+                <p class="testimonial-quote">
+                  The DataPulse dashboard they built reduced our reporting time
+                  from 20 hours a week to under 2. The ROI was immediate. We've
+                  since hired them for two more projects.
+                </p>
+                <div class="d-flex align-items-center gap-3 mt-4">
+                  <div
+                    class="avatar"
+                    style="
+                      background: linear-gradient(135deg, #22c55e, #06b6d4);
+                    "
+                  >
+                    KP
+                  </div>
+                  <div>
+                    <div
+                      style="font-family: var(--font-display); font-weight: 600"
+                    >
+                      Kevin Park
+                    </div>
+                    <div class="text-muted" style="font-size: 0.85rem">
+                      Head of Operations, DataPulse
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev"
+            style="width: 40px"
+          >
+            <span
+              style="
+                background: var(--clr-surface);
+                border: 1px solid var(--clr-border);
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+              ><i class="bi bi-chevron-left" style="color: var(--clr-text)"></i
+            ></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="next"
+            style="width: 40px"
+          >
+            <span
+              style="
+                background: var(--clr-surface);
+                border: 1px solid var(--clr-border);
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+              ><i class="bi bi-chevron-right" style="color: var(--clr-text)"></i
+            ></span>
+          </button>
+        </div>
+
+        <!-- ALL REVIEWS GRID -->
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="testimonial-card h-100">
+              <div class="stars mb-2">★★★★★</div>
+              <p class="testimonial-quote">
+                Shipped our MVP in 5 weeks. Clean code, great design, and they
+                actually understood our business model from day one.
+              </p>
+              <div class="d-flex align-items-center gap-3 mt-3">
+                <div
+                  class="avatar"
+                  style="
+                    width: 38px;
+                    height: 38px;
+                    font-size: 0.8rem;
+                    background: linear-gradient(135deg, #f59e0b, #ef4444);
+                  "
+                >
+                  JW
+                </div>
+                <div>
+                  <div
+                    style="
+                      font-family: var(--font-display);
+                      font-weight: 600;
+                      font-size: 0.9rem;
+                    "
+                  >
+                    James Wong
+                  </div>
+                  <div class="text-muted" style="font-size: 0.8rem">
+                    Founder, WriteAssist
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="testimonial-card h-100">
+              <div class="stars mb-2">★★★★★</div>
+              <p class="testimonial-quote">
+                Our FoodDash app hit 12,000 downloads in the first month. The UX
+                is so smooth that users keep complimenting it in reviews.
+              </p>
+              <div class="d-flex align-items-center gap-3 mt-3">
+                <div
+                  class="avatar"
+                  style="
+                    width: 38px;
+                    height: 38px;
+                    font-size: 0.8rem;
+                    background: linear-gradient(135deg, #431407, #7c2d12);
+                  "
+                >
+                  AM
+                </div>
+                <div>
+                  <div
+                    style="
+                      font-family: var(--font-display);
+                      font-weight: 600;
+                      font-size: 0.9rem;
+                    "
+                  >
+                    Aisha Mwangi
+                  </div>
+                  <div class="text-muted" style="font-size: 0.8rem">
+                    CEO, FoodDash
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="testimonial-card h-100">
+              <div class="stars mb-2">★★★★★</div>
+              <p class="testimonial-quote">
+                Best agency experience I've had in 10 years. Honest, fast, and
+                they push back when your idea isn't right — which is rare and
+                valuable.
+              </p>
+              <div class="d-flex align-items-center gap-3 mt-3">
+                <div
+                  class="avatar"
+                  style="
+                    width: 38px;
+                    height: 38px;
+                    font-size: 0.8rem;
+                    background: linear-gradient(135deg, #0c1445, #1e3a8a);
+                  "
+                >
+                  SB
+                </div>
+                <div>
+                  <div
+                    style="
+                      font-family: var(--font-display);
+                      font-weight: 600;
+                      font-size: 0.9rem;
+                    "
+                  >
+                    Sarah Brooks
+                  </div>
+                  <div class="text-muted" style="font-size: 0.8rem">
+                    VP Product, ClearPay
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="testimonial-card h-100">
+              <div class="stars mb-2">★★★★★</div>
+              <p class="testimonial-quote">
+                They redesigned our entire design system in 3 weeks. The new
+                Figma library alone saved our internal team 10+ hours a week.
+              </p>
+              <div class="d-flex align-items-center gap-3 mt-3">
+                <div
+                  class="avatar"
+                  style="
+                    width: 38px;
+                    height: 38px;
+                    font-size: 0.8rem;
+                    background: linear-gradient(135deg, #052e16, #14532d);
+                  "
+                >
+                  DK
+                </div>
+                <div>
+                  <div
+                    style="
+                      font-family: var(--font-display);
+                      font-weight: 600;
+                      font-size: 0.9rem;
+                    "
+                  >
+                    David Kim
+                  </div>
+                  <div class="text-muted" style="font-size: 0.8rem">
+                    Design Director, Pulse Analytics
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="testimonial-card h-100">
+              <div class="stars mb-2">★★★★★</div>
+              <p class="testimonial-quote">
+                NexaWeb integrated AI into our existing platform in 6 weeks. Our
+                users now save an average of 4 hours per week using the features
+                they built.
+              </p>
+              <div class="d-flex align-items-center gap-3 mt-3">
+                <div
+                  class="avatar"
+                  style="
+                    width: 38px;
+                    height: 38px;
+                    font-size: 0.8rem;
+                    background: linear-gradient(135deg, #1a0533, #2d1b69);
+                  "
+                >
+                  PT
+                </div>
+                <div>
+                  <div
+                    style="
+                      font-family: var(--font-display);
+                      font-weight: 600;
+                      font-size: 0.9rem;
+                    "
+                  >
+                    Priya Tran
+                  </div>
+                  <div class="text-muted" style="font-size: 0.8rem">
+                    CTO, LegalEase SaaS
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="testimonial-card h-100">
+              <div class="stars mb-2">★★★★★</div>
+              <p class="testimonial-quote">
+                Conversion rate went from 1.8% to 4.6% after their CRO work.
+                Paid for itself in the first month. Wish we'd hired them sooner.
+              </p>
+              <div class="d-flex align-items-center gap-3 mt-3">
+                <div
+                  class="avatar"
+                  style="
+                    width: 38px;
+                    height: 38px;
+                    font-size: 0.8rem;
+                    background: linear-gradient(135deg, #1a1a2e, #16213e);
+                  "
+                >
+                  MO
+                </div>
+                <div>
+                  <div
+                    style="
+                      font-family: var(--font-display);
+                      font-weight: 600;
+                      font-size: 0.9rem;
+                    "
+                  >
+                    Mark O'Brien
+                  </div>
+                  <div class="text-muted" style="font-size: 0.8rem">
+                    CMO, StyleHive
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="contact.html" class="btn-nexa btn-nexa-primary"
+            ><i class="bi bi-arrow-up-right"></i> Start Your Project</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer class="nexa-footer">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <div class="footer-brand">Nexa<span>Web</span></div>
+            <p class="footer-desc">Digital products that scale.</p>
+          </div>
+          <div class="col-sm-6 col-lg-2 offset-lg-1">
+            <div class="footer-heading">Company</div>
+            <ul class="footer-links">
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="careers.html">Careers</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-2">
+            <div class="footer-heading">Support</div>
+            <ul class="footer-links">
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="testimonials.html">Reviews</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <div class="footer-heading">Contact</div>
+            <ul class="footer-links">
+              <li>
+                <i
+                  class="bi bi-envelope me-2"
+                  style="color: var(--clr-accent)"
+                ></i
+                >hello@nexaweb.io
+              </li>
+              <li>
+                <i
+                  class="bi bi-telephone me-2"
+                  style="color: var(--clr-accent)"
+                ></i
+                >+1 (415) 555-0192
+              </li>
+              <li>
+                <i
+                  class="bi bi-geo-alt me-2"
+                  style="color: var(--clr-accent)"
+                ></i
+                >San Francisco, CA
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 NexaWeb Agency. All rights reserved.</p>
+          <p>Built with ❤️ and too much coffee.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>
