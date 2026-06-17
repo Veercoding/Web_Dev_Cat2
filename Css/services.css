@@ -1,0 +1,41 @@
+/* services.css — Services page specific styles */
+.service-card {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition);
+  height: 100%;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--clr-accent), var(--clr-accent2));
+    transform: scaleX(0);
+    transform-origin: left;
+     transition: transform var(--transition-slow);
+}
+
+.service-card:hover {
+  border-color: transparent;
+  box-shadow: 0 12px 40px rgba(79, 124, 255, 0.15);
+  transform: translateY(-4px);
+}
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+.service-num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--clr-accent);
+  opacity: 0.6;
+  margin-bottom: 0.75rem;
+}
