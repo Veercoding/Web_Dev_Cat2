@@ -1,0 +1,30 @@
+/* faq.css — FAQ page specific styles */
+.nexa-accordion .accordion-item {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border) !important;
+  border-radius: var(--radius-sm) !important;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.nexa-accordion .accordion-button {
+  background: var(--clr-surface);
+  color: var(--clr-text);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.nexa-accordion .accordion-button:not(.collapsed) {
+  background: var(--clr-surface2);
+  color: var(--clr-accent);
+  box-shadow: none;
+}
+.nexa-accordion .accordion-button::after {
+  filter: invert(0.5);
+}
+.nexa-accordion .accordion-body {
+  background: var(--clr-surface2);
+  color: var(--clr-muted);
+  font-size: 0.92rem;
+  padding: 1rem 1.25rem;
+}
