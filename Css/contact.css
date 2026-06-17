@@ -1,0 +1,56 @@
+.form-nexa .form-control,
+.form-nexa .form-select {
+  background: var(--clr-surface);
+  border: 1.5px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  color: var(--clr-text);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  transition: border-color var(--transition);
+}
+
+.form-nexa .form-control:focus,
+.form-nexa .form-select:focus {
+    border-color: var(--clr-accent);
+    background: var(--clr-surface);
+    color: var(--clr-text);
+     box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.15);
+}
+
+.form-nexa .form-label {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--clr-muted);
+    margin-bottom: 0.4rem;
+}
+
+.form-nexa .form-label{
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--clr-muted);
+    margin-bottom: 0.4rem;
+}
+
+.form-nexa .form-control.is-invalid{
+    border-color: var(--clr-danger);
+}
+
+.form-nexa .form-control.is-valid {
+  border-color: var(--clr-success);
+}
+.form-nexa textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+.form-feedback {
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
+.form-feedback.error {
+  color: var(--clr-danger);
+}
+.form-feedback.success {
+  color: var(--clr-success);
+}
