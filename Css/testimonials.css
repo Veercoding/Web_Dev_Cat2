@@ -1,0 +1,38 @@
+/* testimonials.css — Testimonials page specific styles */
+.testimonial-card {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+.testimonial-quote {
+  font-size: 1.05rem;
+  color: var(--clr-muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+.testimonial-quote::before {
+  content: '"';
+  color: var(--clr-accent);
+  font-size: 1.6rem;
+}
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: #fff;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.stars {
+  color: #f59e0b;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
