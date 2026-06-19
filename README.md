@@ -2,10 +2,10 @@
 
 A fully responsive, multi-page digital agency website built with HTML5, CSS3, JavaScript (ES6+), and Bootstrap 5.
 
-## 🌐 Live Site
+##  Live Site
 [View on GitHub Pages](https://veercoding.github.io/Web_Dev_Cat2)
 
-## 📁 Pages
+## Pages
 - **Home** (`index.html`) — Hero, stats counter, services preview, portfolio preview
 - **About** (`about.html`) — Team cards, company timeline, mission
 - **Services** (`services.html`) — Filterable service cards, pricing tiers
@@ -16,7 +16,7 @@ A fully responsive, multi-page digital agency website built with HTML5, CSS3, Ja
 - **FAQ** (`faq.html`) — Accordion with live search filter
 - **Testimonials** (`testimonials.html`) — Carousel and review grid
 
-## 🚀 Features
+##  Features
 - Dark / Light mode toggle (persisted via localStorage)
 - Animated stats counter on scroll (Intersection Observer API)
 - Portfolio filter by category
@@ -26,13 +26,13 @@ A fully responsive, multi-page digital agency website built with HTML5, CSS3, Ja
 - Scroll reveal animations
 - Fully responsive on mobile, tablet and desktop
 
-## 🛠️ Tech Stack
+##  Tech Stack
 - HTML5 — semantic markup
 - CSS3 — custom design system with CSS variables
 - JavaScript ES6+ — modular, separated by feature
 - Bootstrap 5.3 — grid, modals, accordion, carousel, tooltips
 
-## 📂 File Structure
+## File Structure
 Web_Dev_Cat2/
 
 ├── index.html
