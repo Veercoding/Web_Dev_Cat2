@@ -9,6 +9,31 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/contact.css" />
+
+  <!-- what this page does-->
+   <!--
+  PAGE: Contact (contact.html)
+  PURPOSE: Contact form for potential clients to get in touch
+  
+  SECTIONS:
+  - Navbar: Consistent navigation
+  - Page Header: Page title and breadcrumb
+  - Contact Form: Full form with name, email, service, budget, timeline and message fields
+  - Contact Info: Email, phone, address and hours shown as info cards
+  - Availability Badge: Shows agency is currently accepting projects
+  - Footer: Consistent footer
+  
+  JAVASCRIPT USED:
+  - contact.js: Validates each field on blur (when user leaves the field)
+                Shows green tick for valid fields, red message for invalid
+                On submit checks all fields, shows toast notification on success
+                Simulates sending with 1.2 second delay then resets form
+  
+  HOW TO CUSTOMISE:
+  - Add a form field: Add new input with id, label and matching validation in contact.js
+  - Change validation rules: Edit the validateField function in contact.js
+  - Connect to real email: Integrate EmailJS (we can add this later)
+-->
 </head>
 <body>
   <nav class="nexa-navbar navbar navbar-expand-lg">
