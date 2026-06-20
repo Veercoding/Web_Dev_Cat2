@@ -9,6 +9,28 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/portfolio.css" />
+
+  <!--WHAT THIS PAGE DOES-->
+  <!--
+  PAGE: Portfolio (portfolio.html)
+  PURPOSE: Showcases completed client projects with filter and modal previews
+  
+  SECTIONS:
+  - Navbar: Consistent navigation
+  - Page Header: Page title and breadcrumb
+  - Filter Buttons: Filter projects by type (SaaS, E-commerce, HealthTech, FinTech, Mobile)
+  - Project Grid: 6 project cards with hover overlay showing view and link buttons
+  - Modals: Each project has a Bootstrap modal with detailed description and results
+  - Footer: Consistent footer
+  
+  JAVASCRIPT USED:
+  - filter.js: Filters project cards by data-category attribute
+  - Bootstrap JS: Powers the modal popups when overlay buttons are clicked
+  
+  HOW TO CUSTOMISE:
+  - Add a project: Copy a portfolio-item div, set data-category, change emoji and details
+  - Edit modal content: Find the matching modal id and change the text and stats inside
+-->
 </head>
 <body>
   <nav class="nexa-navbar navbar navbar-expand-lg">
