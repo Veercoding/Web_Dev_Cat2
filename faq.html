@@ -8,6 +8,29 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/faq.css" />
+
+  <!--
+  PAGE: FAQ (faq.html)
+  PURPOSE: Answers common questions using accordion and live search
+  
+  SECTIONS:
+  - Navbar: Consistent navigation
+  - Page Header: Page title and breadcrumb
+  - Live Search: Filters FAQ questions in real time as user types
+  - Process Accordion: 3 questions about how the agency works
+  - Pricing Accordion: 3 questions about costs and payment
+  - Technical Accordion: 3 questions about tech stack and ownership
+  - CTA Card: Encourages users to contact if question not answered
+  - Footer: Consistent footer
+  
+  JAVASCRIPT USED:
+  - search.js: Filters accordion items using data-searchable attribute
+  - Bootstrap JS: Powers the accordion open/close animation
+  
+  HOW TO CUSTOMISE:
+  - Add a question: Copy an .accordion-item, give it a unique id and data-searchable
+  - Add a category: Add a new section label and accordion div group
+-->
 </head>
 <body>
  <nav class="nexa-navbar navbar navbar-expand-lg">
