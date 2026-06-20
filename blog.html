@@ -9,6 +9,29 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/blog.css" />
+
+  <!-- WHAT THIS PAGE DOES -->
+   <!--
+  PAGE: Blog (blog.html)
+  PURPOSE: Shows agency blog posts with live search functionality
+  
+  SECTIONS:
+  - Navbar: Consistent navigation
+  - Page Header: Page title and breadcrumb  
+  - Live Search: Search input that filters articles in real time as user types
+  - Blog Cards: 9 article cards with emoji, tag, title, description, author and date
+  - No Results Message: Shows when search finds no matching articles
+  - Footer: Consistent footer
+  
+  JAVASCRIPT USED:
+  - search.js: Listens to the #liveSearch input, compares query against
+               data-searchable attribute on each card, hides non-matching cards
+               Press Escape key to clear the search
+  
+  HOW TO CUSTOMISE:
+  - Add a blog post: Copy a blog card div, update data-searchable with keywords
+  - Change search keywords: Edit the data-searchable attribute on each card
+-->
 </head>
 <body>
     <!--NAVBAR-->
