@@ -1,4 +1,27 @@
 <!DOCTYPE html>
+<!--
+  PAGE: Portfolio (portfolio.html)
+  PURPOSE: Showcases completed client projects with filter and modal previews
+
+  SECTIONS:
+  - Navbar: Consistent sticky navigation across all pages
+  - Page Header: Page title with breadcrumb showing current location
+  - Filter Buttons: Filter projects by category (All, SaaS, E-commerce, HealthTech, FinTech, Mobile)
+  - Project Grid: 6 project cards with hover overlay and view/link buttons
+  - Modals: Each project has a Bootstrap modal with detailed info and results
+  - Footer: Consistent footer across all pages
+
+  JAVASCRIPT USED:
+  - filter.js: Reads data-category on each .portfolio-item div
+               When a filter button is clicked, hides non-matching cards
+               Uses opacity transition for smooth show/hide animation
+  - Bootstrap JS: Powers the modal popups when overlay buttons are clicked
+
+  HOW TO CUSTOMISE:
+  - Add a project: Copy a .portfolio-item div, set data-category, update content
+  - Add a filter: Add new .filter-btn with data-filter and matching data-category on cards
+  - Edit modal: Find modal with matching id (modal1, modal2 etc) and update content
+-->
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,35 +32,17 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/portfolio.css" />
-
-  <!--WHAT THIS PAGE DOES-->
-  <!--
-  PAGE: Portfolio (portfolio.html)
-  PURPOSE: Showcases completed client projects with filter and modal previews
-  
-  SECTIONS:
-  - Navbar: Consistent navigation
-  - Page Header: Page title and breadcrumb
-  - Filter Buttons: Filter projects by type (SaaS, E-commerce, HealthTech, FinTech, Mobile)
-  - Project Grid: 6 project cards with hover overlay showing view and link buttons
-  - Modals: Each project has a Bootstrap modal with detailed description and results
-  - Footer: Consistent footer
-  
-  JAVASCRIPT USED:
-  - filter.js: Filters project cards by data-category attribute
-  - Bootstrap JS: Powers the modal popups when overlay buttons are clicked
-  
-  HOW TO CUSTOMISE:
-  - Add a project: Copy a portfolio-item div, set data-category, change emoji and details
-  - Edit modal content: Find the matching modal id and change the text and stats inside
--->
 </head>
 <body>
+
+  <!-- NAVBAR — Sticky navigation with dark/light toggle and mobile collapse -->
   <nav class="nexa-navbar navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="index.html">Nexa<span>Web</span></a>
       <div class="d-flex align-items-center gap-2 order-lg-last">
-        <button id="themeToggle" aria-label="Toggle theme"><span id="themeIcon">☀️</span></button>
+        <button id="themeToggle" aria-label="Toggle theme">
+          <i id="themeIcon" class="bi bi-sun-fill"></i>
+        </button>
         <a href="contact.html" class="btn-nexa btn-nexa-primary d-none d-lg-inline-flex"><i class="bi bi-arrow-up-right"></i> Start a Project</a>
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><i class="bi bi-list fs-4" style="color:var(--clr-text)"></i></button>
       </div>
@@ -57,6 +62,7 @@
     </div>
   </nav>
 
+  <!-- PAGE HEADER — Title and breadcrumb navigation -->
   <div class="page-header">
     <div class="container">
       <div class="breadcrumb-nexa"><a href="index.html">Home</a><span>/</span><span class="current">Portfolio</span></div>
@@ -66,8 +72,12 @@
     </div>
   </div>
 
+  <!-- PORTFOLIO SECTION — Filter buttons + project grid -->
   <section class="section-pad">
     <div class="container">
+
+      <!-- FILTER BUTTONS — Click to filter projects by category -->
+      <!-- data-filter must match data-category on portfolio items -->
       <div class="filter-btns">
         <button class="filter-btn active" data-filter="all">All Projects</button>
         <button class="filter-btn" data-filter="saas">SaaS</button>
@@ -77,13 +87,35 @@
         <button class="filter-btn" data-filter="mobile">Mobile</button>
       </div>
 
+      <!-- PROJECT GRID — Each item has data-category for filtering -->
       <div class="row g-4">
+
+        <!-- PROJECT 1 — ShopFlow E-commerce -->
         <div class="col-md-6 col-lg-4 portfolio-item" data-category="ecommerce">
           <div class="portfolio-img-wrap">
-            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3.5rem;background:linear-gradient(135deg,#1a1a2e,#16213e)">🛒</div>
+            <!-- Mockup card with gradient background, icon and tech stack -->
+            <div class="project-mockup" style="background:linear-gradient(135deg,#1a1a2e,#16213e)">
+              <div class="mockup-browser">
+                <div class="mockup-bar">
+                  <span class="dot dot-r"></span>
+                  <span class="dot dot-y"></span>
+                  <span class="dot dot-g"></span>
+                  <div class="mockup-url">shopflow.io</div>
+                </div>
+                <div class="mockup-screen" style="background:linear-gradient(135deg,#0f3460,#16213e)">
+                  <div class="mockup-icon">🛒</div>
+                  <div class="mockup-lines">
+                    <div class="mockup-line" style="width:70%"></div>
+                    <div class="mockup-line" style="width:50%"></div>
+                    <div class="mockup-line short" style="width:30%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- OVERLAY — Appears on hover with view and link buttons -->
             <div class="overlay">
-              <button class="overlay-btn" data-bs-toggle="modal" data-bs-target="#modal1"><i class="bi bi-eye"></i></button>
-              <a href="#" class="overlay-btn"><i class="bi bi-box-arrow-up-right"></i></a>
+              <button class="overlay-btn" data-bs-toggle="modal" data-bs-target="#modal1" title="View Details"><i class="bi bi-eye"></i></button>
+              <a href="#" class="overlay-btn" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
             </div>
           </div>
           <div class="mt-3">
@@ -93,12 +125,30 @@
           </div>
         </div>
 
+        <!-- PROJECT 2 — DataPulse SaaS -->
         <div class="col-md-6 col-lg-4 portfolio-item" data-category="saas">
           <div class="portfolio-img-wrap">
-            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3.5rem;background:linear-gradient(135deg,#0d1b2a,#1b263b)">📊</div>
+            <div class="project-mockup" style="background:linear-gradient(135deg,#0d1b2a,#1b263b)">
+              <div class="mockup-browser">
+                <div class="mockup-bar">
+                  <span class="dot dot-r"></span>
+                  <span class="dot dot-y"></span>
+                  <span class="dot dot-g"></span>
+                  <div class="mockup-url">datapulse.app</div>
+                </div>
+                <div class="mockup-screen" style="background:linear-gradient(135deg,#0a1628,#1b263b)">
+                  <div class="mockup-icon">📊</div>
+                  <div class="mockup-lines">
+                    <div class="mockup-line" style="width:80%"></div>
+                    <div class="mockup-line" style="width:60%"></div>
+                    <div class="mockup-line short" style="width:40%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="overlay">
-              <button class="overlay-btn" data-bs-toggle="modal" data-bs-target="#modal2"><i class="bi bi-eye"></i></button>
-              <a href="#" class="overlay-btn"><i class="bi bi-box-arrow-up-right"></i></a>
+              <button class="overlay-btn" data-bs-toggle="modal" data-bs-target="#modal2" title="View Details"><i class="bi bi-eye"></i></button>
+              <a href="#" class="overlay-btn" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
             </div>
           </div>
           <div class="mt-3">
@@ -108,12 +158,30 @@
           </div>
         </div>
 
+        <!-- PROJECT 3 — MediBook HealthTech -->
         <div class="col-md-6 col-lg-4 portfolio-item" data-category="healthtech">
           <div class="portfolio-img-wrap">
-            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3.5rem;background:linear-gradient(135deg,#1a0533,#2d1b69)">🏥</div>
+            <div class="project-mockup" style="background:linear-gradient(135deg,#1a0533,#2d1b69)">
+              <div class="mockup-browser">
+                <div class="mockup-bar">
+                  <span class="dot dot-r"></span>
+                  <span class="dot dot-y"></span>
+                  <span class="dot dot-g"></span>
+                  <div class="mockup-url">medibook.health</div>
+                </div>
+                <div class="mockup-screen" style="background:linear-gradient(135deg,#150b2e,#2d1b69)">
+                  <div class="mockup-icon">🏥</div>
+                  <div class="mockup-lines">
+                    <div class="mockup-line" style="width:75%"></div>
+                    <div class="mockup-line" style="width:55%"></div>
+                    <div class="mockup-line short" style="width:35%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="overlay">
-              <button class="overlay-btn" data-bs-toggle="modal" data-bs-target="#modal3"><i class="bi bi-eye"></i></button>
-              <a href="#" class="overlay-btn"><i class="bi bi-box-arrow-up-right"></i></a>
+              <button class="overlay-btn" data-bs-toggle="modal" data-bs-target="#modal3" title="View Details"><i class="bi bi-eye"></i></button>
+              <a href="#" class="overlay-btn" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
             </div>
           </div>
           <div class="mt-3">
@@ -123,12 +191,30 @@
           </div>
         </div>
 
+        <!-- PROJECT 4 — ClearPay FinTech -->
         <div class="col-md-6 col-lg-4 portfolio-item" data-category="fintech">
           <div class="portfolio-img-wrap">
-            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3.5rem;background:linear-gradient(135deg,#052e16,#14532d)">💳</div>
+            <div class="project-mockup" style="background:linear-gradient(135deg,#052e16,#14532d)">
+              <div class="mockup-browser">
+                <div class="mockup-bar">
+                  <span class="dot dot-r"></span>
+                  <span class="dot dot-y"></span>
+                  <span class="dot dot-g"></span>
+                  <div class="mockup-url">clearpay.finance</div>
+                </div>
+                <div class="mockup-screen" style="background:linear-gradient(135deg,#031c0e,#14532d)">
+                  <div class="mockup-icon">💳</div>
+                  <div class="mockup-lines">
+                    <div class="mockup-line" style="width:65%"></div>
+                    <div class="mockup-line" style="width:45%"></div>
+                    <div class="mockup-line short" style="width:25%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="overlay">
-              <button class="overlay-btn" data-bs-toggle="modal" data-bs-target="#modal4"><i class="bi bi-eye"></i></button>
-              <a href="#" class="overlay-btn"><i class="bi bi-box-arrow-up-right"></i></a>
+              <button class="overlay-btn" data-bs-toggle="modal" data-bs-target="#modal4" title="View Details"><i class="bi bi-eye"></i></button>
+              <a href="#" class="overlay-btn" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
             </div>
           </div>
           <div class="mt-3">
@@ -138,12 +224,30 @@
           </div>
         </div>
 
+        <!-- PROJECT 5 — FoodDash Mobile -->
         <div class="col-md-6 col-lg-4 portfolio-item" data-category="mobile">
           <div class="portfolio-img-wrap">
-            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3.5rem;background:linear-gradient(135deg,#431407,#7c2d12)">🍕</div>
+            <div class="project-mockup" style="background:linear-gradient(135deg,#431407,#7c2d12)">
+              <div class="mockup-browser">
+                <div class="mockup-bar">
+                  <span class="dot dot-r"></span>
+                  <span class="dot dot-y"></span>
+                  <span class="dot dot-g"></span>
+                  <div class="mockup-url">fooddash.app</div>
+                </div>
+                <div class="mockup-screen" style="background:linear-gradient(135deg,#2a0c04,#7c2d12)">
+                  <div class="mockup-icon">🍕</div>
+                  <div class="mockup-lines">
+                    <div class="mockup-line" style="width:72%"></div>
+                    <div class="mockup-line" style="width:52%"></div>
+                    <div class="mockup-line short" style="width:32%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="overlay">
-              <button class="overlay-btn" data-bs-toggle="modal" data-bs-target="#modal5"><i class="bi bi-eye"></i></button>
-              <a href="#" class="overlay-btn"><i class="bi bi-box-arrow-up-right"></i></a>
+              <button class="overlay-btn" data-bs-toggle="modal" data-bs-target="#modal5" title="View Details"><i class="bi bi-eye"></i></button>
+              <a href="#" class="overlay-btn" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
             </div>
           </div>
           <div class="mt-3">
@@ -153,12 +257,30 @@
           </div>
         </div>
 
+        <!-- PROJECT 6 — WriteAssist AI/SaaS -->
         <div class="col-md-6 col-lg-4 portfolio-item" data-category="saas">
           <div class="portfolio-img-wrap">
-            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3.5rem;background:linear-gradient(135deg,#0c1445,#1e3a8a)">🤖</div>
+            <div class="project-mockup" style="background:linear-gradient(135deg,#0c1445,#1e3a8a)">
+              <div class="mockup-browser">
+                <div class="mockup-bar">
+                  <span class="dot dot-r"></span>
+                  <span class="dot dot-y"></span>
+                  <span class="dot dot-g"></span>
+                  <div class="mockup-url">writeassist.ai</div>
+                </div>
+                <div class="mockup-screen" style="background:linear-gradient(135deg,#070d2a,#1e3a8a)">
+                  <div class="mockup-icon">🤖</div>
+                  <div class="mockup-lines">
+                    <div class="mockup-line" style="width:85%"></div>
+                    <div class="mockup-line" style="width:65%"></div>
+                    <div class="mockup-line short" style="width:45%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="overlay">
-              <button class="overlay-btn" data-bs-toggle="modal" data-bs-target="#modal6"><i class="bi bi-eye"></i></button>
-              <a href="#" class="overlay-btn"><i class="bi bi-box-arrow-up-right"></i></a>
+              <button class="overlay-btn" data-bs-toggle="modal" data-bs-target="#modal6" title="View Details"><i class="bi bi-eye"></i></button>
+              <a href="#" class="overlay-btn" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
             </div>
           </div>
           <div class="mt-3">
@@ -167,16 +289,18 @@
             <p class="text-muted" style="font-size:0.85rem">Next.js · OpenAI API · Supabase</p>
           </div>
         </div>
-      </div>
+
+      </div><!-- end row -->
     </div>
   </section>
 
-  <!-- Modals -->
-  <div class="modal fade" id="modal1" tabindex="-1">
+  <!-- MODALS — Each modal shows detailed project info -->
+  <!-- Modal 1 — ShopFlow -->
+  <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content" style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg)">
         <div class="modal-header" style="border-color:var(--clr-border)">
-          <h5 class="modal-title" style="font-family:var(--font-display)">ShopFlow — B2C Platform</h5>
+          <h5 class="modal-title" id="modal1Label">ShopFlow — B2C Platform</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
@@ -192,12 +316,112 @@
     </div>
   </div>
 
-  <div class="modal fade" id="modal2" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg)"><div class="modal-header" style="border-color:var(--clr-border)"><h5 class="modal-title" style="font-family:var(--font-display)">DataPulse — Analytics Dashboard</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><div style="font-size:5rem;text-align:center;padding:2rem;background:linear-gradient(135deg,#0d1b2a,#1b263b);border-radius:var(--radius-md);margin-bottom:1.5rem">📊</div><p class="text-muted">DataPulse is a real-time analytics SaaS built for 200+ SME clients. Built on React with D3.js visualisations and a Node.js/PostgreSQL backend, it processes 10 million events per day. Clients reduced manual reporting time by an average of 8 hours per week.</p></div></div></div></div>
-  <div class="modal fade" id="modal3" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg)"><div class="modal-header" style="border-color:var(--clr-border)"><h5 class="modal-title" style="font-family:var(--font-display)">MediBook — Clinic Booking App</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><div style="font-size:5rem;text-align:center;padding:2rem;background:linear-gradient(135deg,#1a0533,#2d1b69);border-radius:var(--radius-md);margin-bottom:1.5rem">🏥</div><p class="text-muted">MediBook is a patient-facing mobile app for a chain of 14 private clinics. Patients can book appointments, view results, and message their doctor — all HIPAA-compliant. Reduced no-show rates by 34% in the first 6 months.</p></div></div></div></div>
-  <div class="modal fade" id="modal4" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg)"><div class="modal-header" style="border-color:var(--clr-border)"><h5 class="modal-title" style="font-family:var(--font-display)">ClearPay — Payment Gateway</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><div style="font-size:5rem;text-align:center;padding:2rem;background:linear-gradient(135deg,#052e16,#14532d);border-radius:var(--radius-md);margin-bottom:1.5rem">💳</div><p class="text-muted">A white-label payment gateway for a fintech startup, supporting 12 currencies and 6 payment methods. PCI DSS compliant. Processes $2M in monthly transaction volume.</p></div></div></div></div>
-  <div class="modal fade" id="modal5" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg)"><div class="modal-header" style="border-color:var(--clr-border)"><h5 class="modal-title" style="font-family:var(--font-display)">FoodDash — Delivery App</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><div style="font-size:5rem;text-align:center;padding:2rem;background:linear-gradient(135deg,#431407,#7c2d12);border-radius:var(--radius-md);margin-bottom:1.5rem">🍕</div><p class="text-muted">A food delivery app built with Flutter covering 3 cities, with real-time driver tracking, dynamic pricing, and restaurant dashboards. 4.7 stars on the App Store with 12,000+ downloads in the first month.</p></div></div></div></div>
-  <div class="modal fade" id="modal6" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg)"><div class="modal-header" style="border-color:var(--clr-border)"><h5 class="modal-title" style="font-family:var(--font-display)">WriteAssist — AI Writing Tool</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><div style="font-size:5rem;text-align:center;padding:2rem;background:linear-gradient(135deg,#0c1445,#1e3a8a);border-radius:var(--radius-md);margin-bottom:1.5rem">🤖</div><p class="text-muted">An AI-powered writing assistant with custom brand voice training. Built on Next.js with OpenAI API and Supabase for user data. 3,200 paying subscribers in month two after launch.</p></div></div></div></div>
+  <!-- Modal 2 — DataPulse -->
+  <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg)">
+        <div class="modal-header" style="border-color:var(--clr-border)">
+          <h5 class="modal-title" id="modal2Label">DataPulse — Analytics Dashboard</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div style="font-size:5rem;text-align:center;padding:2rem;background:linear-gradient(135deg,#0d1b2a,#1b263b);border-radius:var(--radius-md);margin-bottom:1.5rem">📊</div>
+          <p class="text-muted">DataPulse is a real-time analytics SaaS built for 200+ SME clients. Built on React with D3.js visualisations and a Node.js/PostgreSQL backend, it processes 10 million events per day. Clients reduced manual reporting time by an average of 8 hours per week.</p>
+          <div class="row g-3 mt-3">
+            <div class="col-4 text-center"><div style="font-size:1.5rem;font-weight:700;color:var(--clr-accent)">200+</div><div class="text-muted" style="font-size:0.8rem">Clients</div></div>
+            <div class="col-4 text-center"><div style="font-size:1.5rem;font-weight:700;color:var(--clr-accent)">10M</div><div class="text-muted" style="font-size:0.8rem">Events/Day</div></div>
+            <div class="col-4 text-center"><div style="font-size:1.5rem;font-weight:700;color:var(--clr-accent)">8hrs</div><div class="text-muted" style="font-size:0.8rem">Saved Weekly</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- Modal 3 — MediBook -->
+  <div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg)">
+        <div class="modal-header" style="border-color:var(--clr-border)">
+          <h5 class="modal-title">MediBook — Clinic Booking App</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div style="font-size:5rem;text-align:center;padding:2rem;background:linear-gradient(135deg,#1a0533,#2d1b69);border-radius:var(--radius-md);margin-bottom:1.5rem">🏥</div>
+          <p class="text-muted">MediBook is a patient-facing mobile app for a chain of 14 private clinics. Patients can book appointments, view results, and message their doctor — all HIPAA-compliant. Reduced no-show rates by 34% in the first 6 months.</p>
+          <div class="row g-3 mt-3">
+            <div class="col-4 text-center"><div style="font-size:1.5rem;font-weight:700;color:var(--clr-accent)">34%</div><div class="text-muted" style="font-size:0.8rem">Less No-Shows</div></div>
+            <div class="col-4 text-center"><div style="font-size:1.5rem;font-weight:700;color:var(--clr-accent)">14</div><div class="text-muted" style="font-size:0.8rem">Clinics</div></div>
+            <div class="col-4 text-center"><div style="font-size:1.5rem;font-weight:700;color:var(--clr-accent)">4.8★</div><div class="text-muted" style="font-size:0.8rem">App Store</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4 — ClearPay -->
+  <div class="modal fade" id="modal4" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg)">
+        <div class="modal-header" style="border-color:var(--clr-border)">
+          <h5 class="modal-title">ClearPay — Payment Gateway</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div style="font-size:5rem;text-align:center;padding:2rem;background:linear-gradient(135deg,#052e16,#14532d);border-radius:var(--radius-md);margin-bottom:1.5rem">💳</div>
+          <p class="text-muted">A white-label payment gateway for a fintech startup, supporting 12 currencies and 6 payment methods. PCI DSS compliant. Processes $2M in monthly transaction volume.</p>
+          <div class="row g-3 mt-3">
+            <div class="col-4 text-center"><div style="font-size:1.5rem;font-weight:700;color:var(--clr-accent)">$2M</div><div class="text-muted" style="font-size:0.8rem">Monthly Volume</div></div>
+            <div class="col-4 text-center"><div style="font-size:1.5rem;font-weight:700;color:var(--clr-accent)">12</div><div class="text-muted" style="font-size:0.8rem">Currencies</div></div>
+            <div class="col-4 text-center"><div style="font-size:1.5rem;font-weight:700;color:var(--clr-accent)">PCI</div><div class="text-muted" style="font-size:0.8rem">DSS Compliant</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5 — FoodDash -->
+  <div class="modal fade" id="modal5" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg)">
+        <div class="modal-header" style="border-color:var(--clr-border)">
+          <h5 class="modal-title">FoodDash — Delivery App</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div style="font-size:5rem;text-align:center;padding:2rem;background:linear-gradient(135deg,#431407,#7c2d12);border-radius:var(--radius-md);margin-bottom:1.5rem">🍕</div>
+          <p class="text-muted">A food delivery app built with Flutter covering 3 cities, with real-time driver tracking, dynamic pricing, and restaurant dashboards. 4.7 stars on the App Store with 12,000+ downloads in the first month.</p>
+          <div class="row g-3 mt-3">
+            <div class="col-4 text-center"><div style="font-size:1.5rem;font-weight:700;color:var(--clr-accent)">12k+</div><div class="text-muted" style="font-size:0.8rem">Downloads</div></div>
+            <div class="col-4 text-center"><div style="font-size:1.5rem;font-weight:700;color:var(--clr-accent)">4.7★</div><div class="text-muted" style="font-size:0.8rem">App Store</div></div>
+            <div class="col-4 text-center"><div style="font-size:1.5rem;font-weight:700;color:var(--clr-accent)">3</div><div class="text-muted" style="font-size:0.8rem">Cities</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 6 — WriteAssist -->
+  <div class="modal fade" id="modal6" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg)">
+        <div class="modal-header" style="border-color:var(--clr-border)">
+          <h5 class="modal-title">WriteAssist — AI Writing Tool</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div style="font-size:5rem;text-align:center;padding:2rem;background:linear-gradient(135deg,#0c1445,#1e3a8a);border-radius:var(--radius-md);margin-bottom:1.5rem">🤖</div>
+          <p class="text-muted">An AI-powered writing assistant with custom brand voice training. Built on Next.js with OpenAI API and Supabase for user data. 3,200 paying subscribers in month two after launch.</p>
+          <div class="row g-3 mt-3">
+            <div class="col-4 text-center"><div style="font-size:1.5rem;font-weight:700;color:var(--clr-accent)">3.2k</div><div class="text-muted" style="font-size:0.8rem">Subscribers</div></div>
+            <div class="col-4 text-center"><div style="font-size:1.5rem;font-weight:700;color:var(--clr-accent)">M2</div><div class="text-muted" style="font-size:0.8rem">Profitable</div></div>
+            <div class="col-4 text-center"><div style="font-size:1.5rem;font-weight:700;color:var(--clr-accent)">4.9★</div><div class="text-muted" style="font-size:0.8rem">Rating</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER — Links, contact info and social media -->
   <footer class="nexa-footer"><div class="container"><div class="row gy-4"><div class="col-lg-4"><div class="footer-brand">Nexa<span>Web</span></div><p class="footer-desc">Digital products that scale.</p></div><div class="col-sm-6 col-lg-2 offset-lg-1"><div class="footer-heading">Company</div><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li><li><a href="careers.html">Careers</a></li></ul></div><div class="col-sm-6 col-lg-2"><div class="footer-heading">Support</div><ul class="footer-links"><li><a href="contact.html">Contact</a></li><li><a href="faq.html">FAQ</a></li><li><a href="testimonials.html">Reviews</a></li></ul></div><div class="col-lg-3"><div class="footer-heading">Contact</div><ul class="footer-links"><li><i class="bi bi-envelope me-2" style="color:var(--clr-accent)"></i>hello@nexaweb.io</li><li><i class="bi bi-telephone me-2" style="color:var(--clr-accent)"></i>+1 (415) 555-0192</li><li><i class="bi bi-geo-alt me-2" style="color:var(--clr-accent)"></i>San Francisco, CA</li></ul></div></div><div class="footer-bottom"><p>© 2026 NexaWeb Agency. All rights reserved.</p><p>Built with ❤️ and too much coffee.</p></div></div></footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -209,9 +433,15 @@
   <script src="js/search.js"></script>
   <script src="js/contact.js"></script>
 
+  <!-- WHATSAPP BUTTON — Quick contact via WhatsApp -->
+  <a href="https://wa.me/254113114342" target="_blank" id="whatsappBtn" aria-label="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
   <!-- BACK TO TOP BUTTON — Appears when user scrolls down -->
-<button id="backToTop" aria-label="Back to top">
-  <i class="bi bi-arrow-up"></i>
-</button>
+  <button id="backToTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
 </body>
 </html>
