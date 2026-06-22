@@ -513,7 +513,7 @@ h6 {
 #backToTop {
   position: fixed;
   bottom: 2rem;
-  left: 2rem;
+  right: 2rem;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -534,6 +534,26 @@ h6 {
 #backToTop.show {
   opacity: 1;
   visibility: visible;
+}
+
+
+/* ── WhatsApp Button ─────────────────────────────────────────── */
+#whatsappBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: all var(--transition);
 }
 
 /* ── Responsive ─────────────────────────────────────────────── */
