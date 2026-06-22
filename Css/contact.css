@@ -43,6 +43,12 @@
 .form-nexa textarea {
   resize: vertical;
   min-height: 130px;
+  max-height: 300px;
+}
+
+/* fix form container*/
+.form-nexa .form-control {
+  width: 100%;
 }
 .form-feedback {
   font-size: 0.8rem;
