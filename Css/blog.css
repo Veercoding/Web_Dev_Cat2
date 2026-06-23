@@ -44,3 +44,10 @@
   font-size: 0.8rem;
   color: var(--clr-muted);
 }
+
+.blog-card-img {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-bottom: 1px solid var(--clr-border);
+  background: var(--clr-surface2);
+}
