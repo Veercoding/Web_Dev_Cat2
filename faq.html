@@ -4,26 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAQ — NexaWeb Agency</title>
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/faq.css" />
 
-    <!--
-  PAGE: FAQ (faq.html)
+    <!-- PAGE: FAQ (faq.html)
   PURPOSE: Answers common questions using accordion and live search
-  
-  SECTIONS:
+   SECTIONS:
   - Navbar: Consistent navigation
   - Page Header: Page title and breadcrumb
   - Live Search: Filters FAQ questions in real time as user types
@@ -50,17 +39,8 @@
           <button id="themeToggle" aria-label="Toggle theme">
             <span id="themeIcon">☀️</span>
           </button>
-          <a
-            href="contact.html"
-            class="btn-nexa btn-nexa-primary d-none d-lg-inline-flex"
-            ><i class="bi bi-arrow-up-right"></i> Start a Project</a
-          >
-          <button
-            class="navbar-toggler border-0"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navMenu"
-          >
+          <a href="contact.html" class="btn-nexa btn-nexa-primary d-none d-lg-inline-flex"><i class="bi bi-arrow-up-right"></i> Start a Project</a>
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" >
             <i class="bi bi-list fs-4" style="color: var(--clr-text)"></i>
           </button>
         </div>
@@ -101,8 +81,7 @@
     <div class="page-header">
       <div class="container">
         <div class="breadcrumb-nexa">
-          <a href="index.html">Home</a><span>/</span
-          ><span class="current">FAQ</span>
+          <a href="index.html">Home</a><span>/</span><span class="current">FAQ</span>
         </div>
         <span class="section-label">FAQ</span>
         <h1 class="display-2">Frequently Asked Questions</h1>
@@ -120,12 +99,7 @@
             <!-- Live Search -->
             <div class="nexa-search">
               <i class="bi bi-search search-icon"></i>
-              <input
-                type="text"
-                id="liveSearch"
-                placeholder="Search questions..."
-                aria-label="Search FAQ"
-              />
+              <input type="text" id="liveSearch" placeholder="Search questions..." aria-label="Search FAQ" />
             </div>
 
             <div id="noResults" style="display: none" class="text-center py-5">
@@ -138,24 +112,13 @@
             </div>
 
             <!-- Process -->
-            <div
-              class="mb-3"
-              data-searchable="process how does it work engagement working together project start"
-            >
+            <div class="mb-3" data-searchable="process how does it work engagement working together project start">
               <span class="section-label">Process</span>
             </div>
             <div class="nexa-accordion accordion mb-5">
-              <div
-                class="accordion-item"
-                data-searchable="how does the engagement process work start project"
-              >
+              <div class="accordion-item" data-searchable="how does the engagement process work start project">
                 <h2 class="accordion-header">
-                  <button
-                    class="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq1"
-                  >
+                  <button class="accordion-button" type="button"data-bs-toggle="collapse" data-bs-target="#faq1">
                     How does your engagement process work?
                   </button>
                 </h2>
@@ -169,17 +132,9 @@
                   </div>
                 </div>
               </div>
-              <div
-                class="accordion-item"
-                data-searchable="how long does a project take timeline weeks months"
-              >
+              <div class="accordion-item" data-searchable="how long does a project take timeline weeks months">
                 <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq2"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
                     How long does a typical project take?
                   </button>
                 </h2>
@@ -192,17 +147,9 @@
                   </div>
                 </div>
               </div>
-              <div
-                class="accordion-item"
-                data-searchable="involved how much client involvement updates communication"
-              >
+              <div class="accordion-item" data-searchable="involved how much client involvement updates communication">
                 <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq3"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
                     How involved do I need to be during the project?
                   </button>
                 </h2>
@@ -222,17 +169,9 @@
               <span class="section-label">Pricing</span>
             </div>
             <div class="nexa-accordion accordion mb-5">
-              <div
-                class="accordion-item"
-                data-searchable="how much does it cost pricing budget payment"
-              >
+              <div class="accordion-item" data-searchable="how much does it cost pricing budget payment">
                 <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq4"
-                  >
+                  <button class="accordion-button collapsed" type="button"  data-bs-toggle="collapse" data-bs-target="#faq4">
                     How much does a project cost?
                   </button>
                 </h2>
@@ -246,17 +185,9 @@
                   </div>
                 </div>
               </div>
-              <div
-                class="accordion-item"
-                data-searchable="payment schedule deposit how do I pay invoice"
-              >
+              <div class="accordion-item" data-searchable="payment schedule deposit how do I pay invoice">
                 <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq5"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
                     What is your payment schedule?
                   </button>
                 </h2>
@@ -271,15 +202,9 @@
               </div>
               <div
                 class="accordion-item"
-                data-searchable="hidden fees extra charges scope creep additional costs"
-              >
+                data-searchable="hidden fees extra charges scope creep additional costs">
                 <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq6"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
                     Are there any hidden fees?
                   </button>
                 </h2>
@@ -299,17 +224,9 @@
               <span class="section-label">Technical</span>
             </div>
             <div class="nexa-accordion accordion mb-5">
-              <div
-                class="accordion-item"
-                data-searchable="technologies stack programming languages frameworks tools used"
-              >
+              <div class="accordion-item" data-searchable="technologies stack programming languages frameworks tools used">
                 <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq7"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
                     What technologies do you use?
                   </button>
                 </h2>
@@ -323,17 +240,9 @@
                   </div>
                 </div>
               </div>
-              <div
-                class="accordion-item"
-                data-searchable="code ownership who owns the code intellectual property rights"
-              >
+              <div class="accordion-item" data-searchable="code ownership who owns the code intellectual property rights" >
                 <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq8"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
                     Who owns the code after the project?
                   </button>
                 </h2>
@@ -346,17 +255,9 @@
                   </div>
                 </div>
               </div>
-              <div
-                class="accordion-item"
-                data-searchable="support maintenance after launch ongoing help bugs fixes"
-              >
+              <div class="accordion-item" data-searchable="support maintenance after launch ongoing help bugs fixes">
                 <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq9"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
                     Do you offer support after launch?
                   </button>
                 </h2>
@@ -371,29 +272,27 @@
               </div>
             </div>
 
-            <div
-              class="nexa-card text-center"
-              style="
+            <div class="nexa-card text-center" style="
                 background: linear-gradient(
                   135deg,
-                  rgba(79, 124, 255, 0.08),
-                  rgba(124, 92, 255, 0.08)
+                  rgba(79, 124, 255, 0.1),
+                  rgba(124, 92, 255, 0.1)
                 );
-                border-color: rgba(79, 124, 255, 0.25);
+                border-color: rgba(79, 124, 255, 0.3);
+                padding: 1rem 1.25rem;
               "
             >
               <h4>Still have questions?</h4>
               <p class="text-muted mb-4">
                 We're happy to jump on a quick call and answer anything.
               </p>
-              <a href="contact.html" class="btn-nexa btn-nexa-primary"
-                ><i class="bi bi-chat-dots"></i> Talk to Us</a
-              >
+              <a href="contact.html" class="btn-nexa btn-nexa-primary"><i class="bi bi-chat-dots"></i> Talk to Us</a>
             </div>
           </div>
         </div>
       </div>
     </section>
+    
     <footer class="nexa-footer">
       <div class="container">
         <div class="row gy-4">
@@ -422,25 +321,9 @@
           <div class="col-lg-3">
             <div class="footer-heading">Contact</div>
             <ul class="footer-links">
-              <li><i
-                  class="bi bi-envelope me-2"
-                  style="color: var(--clr-accent)"
-                ></i
-                >hello@nexaweb.io
-              </li>
-              <li>
-                <i
-                  class="bi bi-telephone me-2"
-                  style="color: var(--clr-accent)"
-                ></i
-                >+1 (415) 555-0192
-              </li>
-              <li>
-                <i
-                  class="bi bi-geo-alt me-2"
-                  style="color: var(--clr-accent)"
-                ></i
-                >San Francisco, CA
+              <li><i class="bi bi-envelope me-2" style="color: var(--clr-accent)"></i>hello@nexaweb.io</li>
+              <li><i class="bi bi-telephone me-2" style="color: var(--clr-accent)"></i>+1 (415) 555-0192</li>
+              <li><i class="bi bi-geo-alt me-2" style="color: var(--clr-accent)"></i>San Francisco, CA
               </li>
             </ul>
           </div>
