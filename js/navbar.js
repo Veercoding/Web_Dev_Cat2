@@ -52,4 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+/* --- Bootstrap tooltips --- */
+const tooltipsEls = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+tooltipsEls.forEach(el => new bootstrap.Tooltip(el));
 });
