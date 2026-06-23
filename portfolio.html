@@ -36,31 +36,76 @@
 <body>
 
   <!-- NAVBAR — Sticky navigation with dark/light toggle and mobile collapse -->
-  <nav class="nexa-navbar navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Nexa<span>Web</span></a>
-      <div class="d-flex align-items-center gap-2 order-lg-last">
-        <button id="themeToggle" aria-label="Toggle theme">
-          <i id="themeIcon" class="bi bi-sun-fill"></i>
-        </button>
-        <a href="contact.html" class="btn-nexa btn-nexa-primary d-none d-lg-inline-flex"><i class="bi bi-arrow-up-right"></i> Start a Project</a>
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><i class="bi bi-list fs-4" style="color:var(--clr-text)"></i></button>
-      </div>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav mx-auto gap-1">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="testimonials.html">Reviews</a></li>
-          <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
-          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+   <nav class="nexa-navbar navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Nexa<span>Web</span></a>
+
+            <!---->
+            <div class="d-flex align-items-center gap-2 order-lg-last">
+                <button id="themeToggle" aria-label="Toggle theme"> <i id="themeIcon" class="bi bi-sun-fill"></i> </button>
+                <!---->
+                <a href="contact.html" class="btn-nexa btn-nexa-primary d-none d-lg-inline-flex">
+                    <i class="bi bi-arrow-up-right"></i> Start a Project
+                </a>
+                <!---->
+                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+              <i class="bi bi-list fs-4" style="color:var(--clr-text)"></i>
+                 </button>
+        </div>
+
+
+        <!---->
+        <div class="collapse navbar-collapse" id="navMenu">
+           <ul class="navbar-nav mx-auto gap-1">
+  <li class="nav-item">
+    <a class="nav-link" href="index.html"
+       data-bs-toggle="tooltip" data-bs-placement="bottom"
+       title="Go to Homepage">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="about.html"
+       data-bs-toggle="tooltip" data-bs-placement="bottom"
+       title="Learn about our team and story">About</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="services.html"
+       data-bs-toggle="tooltip" data-bs-placement="bottom"
+       title="See what we offer">Services</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="portfolio.html"
+       data-bs-toggle="tooltip" data-bs-placement="bottom"
+       title="Browse our past projects">Portfolio</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="blog.html"
+       data-bs-toggle="tooltip" data-bs-placement="bottom"
+       title="Read our latest articles">Blog</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="testimonials.html"
+       data-bs-toggle="tooltip" data-bs-placement="bottom"
+       title="See what clients say">Reviews</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="careers.html"
+       data-bs-toggle="tooltip" data-bs-placement="bottom"
+       title="Join our team">Careers</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="faq.html"
+       data-bs-toggle="tooltip" data-bs-placement="bottom"
+       title="Common questions answered">FAQ</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="contact.html"
+       data-bs-toggle="tooltip" data-bs-placement="bottom"
+       title="Get in touch with us">Contact</a>
+  </li>
+</ul>
+        </div>
+        </div>
+    </nav>
 
   <!-- PAGE HEADER — Title and breadcrumb navigation -->
   <div class="page-header">
