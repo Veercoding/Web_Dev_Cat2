@@ -1,6 +1,10 @@
 /* ============================================================
    NexaWeb Agency — style.css (GLOBAL)
-   Navbar, Footer, Buttons, Variables, Utilities
+   Author: Harshvir Singh Ahuja
+   Date: June 2026
+   Description: Global design system including CSS variables,
+   navbar, footer, buttons, cards and utility classes.
+   All page-specific styles are in their own CSS files.
    ============================================================ */
 
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap");
