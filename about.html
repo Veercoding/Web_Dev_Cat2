@@ -180,68 +180,91 @@
   </section>
 
   <!-- TEAM -->
-  <section class="section-pad" style="background:var(--clr-surface);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
-    <div class="container">
-      <div class="text-center mb-5">
-        <span class="section-label">The People</span>
-        <h2 class="section-title">Meet the Team</h2>
-        <p class="text-muted">Senior engineers and designers who've shipped at scale.</p>
-      </div>
-      <div class="row g-4" data-stagger>
-        <div class="col-sm-6 col-lg-3 reveal">
-          <div class="team-card">
-            <div class="team-avatar">AK</div>
-            <h5 class="mb-1">Alex Kim</h5>
-            <div class="team-role mb-2">CEO &amp; Co-Founder</div>
-            <p class="text-muted" style="font-size:0.85rem">Former eng lead at Stripe. Obsessed with developer experience and growth loops.</p>
-            <div class="social-links">
-              <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
-              <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-3 reveal">
-          <div class="team-card">
-            <div class="team-avatar" style="background:linear-gradient(135deg,#ec4899,#8b5cf6)">MR</div>
-            <h5 class="mb-1">Maya Reyes</h5>
-            <div class="team-role mb-2">Head of Design</div>
-            <p class="text-muted" style="font-size:0.85rem">7 years at IDEO. Turns complex problems into intuitive interfaces people love.</p>
-            <div class="social-links">
-              <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
-              <a href="#" class="social-link"><i class="bi bi-dribbble"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-3 reveal">
-          <div class="team-card">
-            <div class="team-avatar" style="background:linear-gradient(135deg,#22c55e,#06b6d4)">JP</div>
-            <h5 class="mb-1">James Park</h5>
-            <div class="team-role mb-2">CTO &amp; Co-Founder</div>
-            <p class="text-muted" style="font-size:0.85rem">Ex-Amazon engineer. Architected systems serving 50M+ daily active users.</p>
-            <div class="social-links">
-              <a href="#" class="social-link"><i class="bi bi-github"></i></a>
-              <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-3 reveal">
-          <div class="team-card">
-            <div class="team-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">SN</div>
-            <h5 class="mb-1">Sara Nguyen</h5>
-            <div class="team-role mb-2">Head of Growth</div>
-            <p class="text-muted" style="font-size:0.85rem">Performance marketer who scaled two SaaS companies from $0 to $10M ARR.</p>
-            <div class="social-links">
-              <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
-              <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="text-center mt-5">
-        <a href="careers.html" class="btn-nexa btn-nexa-outline"><i class="bi bi-person-plus"></i> Join Our Team</a>
-      </div>
+ <!-- TEAM SECTION — 4 team cards in a responsive grid -->
+<section class="section-pad" style="background:var(--clr-surface);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-label">The People</span>
+      <h2 class="section-title">Meet the Team</h2>
+      <p class="text-muted">Senior engineers and designers who've shipped at scale.</p>
     </div>
-  </section>
+
+    <!-- ONE row div contains ALL 4 cards -->
+    <div class="row g-4">
+
+      <!-- Team Member 1 -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="team-card">
+          <div class="team-avatar-img">
+            <img src="images/teams/Team-4.jpg" alt="Harshvir Singh Ahuja - CEO and Co-Founder" />
+          </div>
+          <h5 class="mb-1">Harshvir Singh Ahuja</h5>
+          <div class="team-role mb-2">CEO &amp; Co-Founder</div>
+          <p class="text-muted" style="font-size:0.85rem">Former eng lead at Stripe. Obsessed with developer experience and growth loops.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="team-card">
+          <div class="team-avatar-img">
+            <img src="images/teams/Team-1.jpg" alt="Maya Reyes - Head of Design" />
+          </div>
+          <h5 class="mb-1">Maya Reyes</h5>
+          <div class="team-role mb-2">Head of Design</div>
+          <p class="text-muted" style="font-size:0.85rem">7 years at IDEO. Turns complex problems into intuitive interfaces people love.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="team-card">
+          <div class="team-avatar-img">
+            <img src="images/teams/Team-2.jpg" alt="James Park - CTO and Co-Founder" />
+          </div>
+          <h5 class="mb-1">James Park</h5>
+          <div class="team-role mb-2">CTO &amp; Co-Founder</div>
+          <p class="text-muted" style="font-size:0.85rem">Ex-Amazon engineer. Architected systems serving 50M+ daily active users.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 4 -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="team-card">
+          <div class="team-avatar-img">
+            <img src="images/teams/Team-3.jpg" alt="Sara Nguyen - Head of Growth" />
+          </div>
+          <h5 class="mb-1">Sara Nguyen</h5>
+          <div class="team-role mb-2">Head of Growth</div>
+          <p class="text-muted" style="font-size:0.85rem">Performance marketer who scaled two SaaS companies from $0 to $10M ARR.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end row — all 4 cards inside ONE row -->
+
+    <div class="text-center mt-5">
+      <a href="careers.html" class="btn-nexa btn-nexa-outline">
+        <i class="bi bi-person-plus"></i> Join Our Team
+      </a>
+    </div>
+  </div>
+</section>
 
   <!--TIMELINE-->
 
