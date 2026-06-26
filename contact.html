@@ -131,15 +131,18 @@
             <form id="contactForm" class="form-nexa" novalidate>
               <div class="row g-3">
                 <div class="col-md-6">
+                  <!--Full name-->
                   <label class="form-label" for="contactName">Full Name *</label>
                   <input type="text" class="form-control" id="contactName" placeholder="John Smith" />
                   <div class="form-feedback" id="contactNameFeedback"></div>
                 </div>
                 <div class="col-md-6">
+                  <!--Email address-->
                   <label class="form-label" for="contactEmail">Email Address *</label>
                   <input type="email" class="form-control" id="contactEmail" placeholder="john@company.com" />
                   <div class="form-feedback" id="contactEmailFeedback"></div>
                 </div>
+                <!--Service selection-->
                 <div class="col-12">
                   <label class="form-label" for="contactService">Service You're Interested In *</label>
                   <select class="form-select" id="contactService">
@@ -155,6 +158,7 @@
                   </select>
                   <div class="form-feedback" id="contactServiceFeedback"></div>
                 </div>
+                <!--Budget and timeline selection-->
                 <div class="col-md-6">
                   <label class="form-label" for="contactBudget">Estimated Budget</label>
                   <select class="form-select" id="contactBudget">
@@ -166,6 +170,7 @@
                     <option>Let's discuss</option>
                   </select>
                 </div>
+                <!--Timeline selection-->
                 <div class="col-md-6">
                   <label class="form-label" for="contactTimeline">Timeline</label>
                   <select class="form-select" id="contactTimeline">
@@ -176,6 +181,7 @@
                     <option>Flexible</option>
                   </select>
                 </div>
+                <!--Project description-->
                 <div class="col-12">
                   <label class="form-label" for="contactMessage">Tell Us About Your Project *</label>
                   <textarea class="form-control" id="contactMessage" rows="5" placeholder="Describe your project, goals, and any specific requirements..."></textarea>
@@ -197,7 +203,7 @@
             <span class="section-label">Direct Contact</span>
             <h3 class="section-title">Other Ways to Reach Us</h3>
           </div>
-
+          <!--Email Card-->
           <div class="d-flex flex-column gap-3 mb-4">
             <div class="nexa-card" style="padding:1.25rem;flex-direction:row;display:flex;align-items:center;gap:1rem">
               <div class="icon-box" style="margin:0;flex-shrink:0"><i class="bi bi-envelope"></i></div>
@@ -206,6 +212,7 @@
                 <a href="mailto:hello@nexaweb.io" style="font-size:0.85rem;color:var(--clr-muted)">hello@nexaweb.io</a>
               </div>
             </div>
+            <!--Phone Card-->
             <div class="nexa-card" style="padding:1.25rem;flex-direction:row;display:flex;align-items:center;gap:1rem">
               <div class="icon-box" style="margin:0;flex-shrink:0"><i class="bi bi-telephone"></i></div>
               <div>
@@ -213,6 +220,7 @@
                 <a href="tel:+14155550192" style="font-size:0.85rem;color:var(--clr-muted)">+1 (415) 555-0192</a>
               </div>
             </div>
+            <!--Address Card-->
             <div class="nexa-card" style="padding:1.25rem;flex-direction:row;display:flex;align-items:center;gap:1rem">
               <div class="icon-box" style="margin:0;flex-shrink:0"><i class="bi bi-geo-alt"></i></div>
               <div>
@@ -220,11 +228,20 @@
                 <span style="font-size:0.85rem;color:var(--clr-muted)">340 Pine Street, Suite 800<br>San Francisco, CA 94104</span>
               </div>
             </div>
+            <!--Hours Card-->
             <div class="nexa-card" style="padding:1.25rem;flex-direction:row;display:flex;align-items:center;gap:1rem">
               <div class="icon-box" style="margin:0;flex-shrink:0"><i class="bi bi-clock"></i></div>
               <div>
                 <div style="font-family:var(--font-display);font-weight:600;font-size:0.9rem">Hours</div>
                 <span style="font-size:0.85rem;color:var(--clr-muted)">Mon–Fri: 9am – 6pm PST<br>Response within 24 hours</span>
+              </div>
+            </div>
+            <!-- WhatsApp Card -->
+            <div class="nexa-card" style="padding:1.25rem;flex-direction:row;display:flex;align-items:center;gap:1rem">
+              <div class="icon-box" style="margin:0;flex-shrink:0"><i class="bi bi-whatsapp"></i></div>
+              <div>
+                <div style="font-family:var(--font-display);font-weight:600;font-size:0.9rem">WhatsApp</div>
+                <a href="https://wa.me/254113114342" target="_blank" style="font-size:0.85rem;color:var(--clr-muted)">Chat with us on WhatsApp</a>
               </div>
             </div>
           </div>
