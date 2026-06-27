@@ -88,27 +88,52 @@ document.addEventListener('DOMContentLoaded', () => {
     const allValid  = fields.every(id => validateField(id));
 
     if (allValid) {
-      // Simulate sending
-      const btn = contactForm.querySelector('[type="submit"]');
-      if (btn) {
-        btn.textContent = 'Sending...';
-        btn.disabled = true;
-      }
-      setTimeout(() => {
-        showToast('✅ Message sent! We\'ll get back to you within 24 hours.');
-        contactForm.reset();
-        fields.forEach(id => {
-          const el = document.getElementById(id);
-          if (el) el.classList.remove('is-valid', 'is-invalid');
-          const fb = document.getElementById(id + 'Feedback');
-          if (fb) fb.textContent = '';
-        });
-        if (btn) { btn.textContent = 'Send Message'; btn.disabled = false; }
-      }, 1200);
+  const btn = contactForm.querySelector('[type="submit"]');
+  if (btn) {
+    btn.innerHTML = '<i class="bi bi-hourglass-split"></i> Sending...';
+    btn.disabled = true;
+  }
+
+  // Collect all form data including the hidden access_key
+  const formData = new FormData(contactForm);
+
+  // Send to Web3Forms API
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    body: formData
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      // Success — show toast and reset form
+      showToast('✅ Message sent! We\'ll get back to you within 24 hours.');
+      contactForm.reset();
+      fields.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.remove('is-valid', 'is-invalid');
+        const fb = document.getElementById(id + 'Feedback');
+        if (fb) fb.textContent = '';
+      });
     } else {
-      showToast('⚠️ Please fix the errors above.', 'error');
-      const firstError = contactForm.querySelector('.is-invalid');
-      if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      showToast('❌ Something went wrong. Please try again.', 'error');
     }
+    if (btn) {
+      btn.innerHTML = '<i class="bi bi-send"></i> Send Message';
+      btn.disabled = false;
+    }
+  })
+  .catch(() => {
+    showToast('❌ Network error. Please try again.', 'error');
+    if (btn) {
+      btn.innerHTML = '<i class="bi bi-send"></i> Send Message';
+      btn.disabled = false;
+    }
+  });
+
+} else {
+  showToast('⚠️ Please fix the errors above.', 'error');
+  const firstError = contactForm.querySelector('.is-invalid');
+  if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
   });
 });
