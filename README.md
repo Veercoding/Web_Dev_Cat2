@@ -3,7 +3,16 @@
 A fully responsive, multi-page digital agency website built with HTML5, CSS3, JavaScript (ES6+), and Bootstrap 5.
 
 ##  Live Site
-[View on GitHub Pages](https://veercoding.github.io/Web_Dev_Cat2)
+[View on GitHub Pages](https://veercoding.github.io/Web_Dev_Cat2), i have depolyed but the css is taking time so i will wait if it happens then i have managed to deploy using github - pages. 
+
+
+##Submission details 
+**Student: ** Harshvir Singh Ahuja 
+**Course: ** Web Application Development (CAT 2)
+** Institution ** SCES 
+** submission date : 28th june/ 06 / 2026
+
+
 
 ## Pages
 - **Home** (`index.html`) — Hero, stats counter, services preview, portfolio preview
@@ -25,6 +34,8 @@ A fully responsive, multi-page digital agency website built with HTML5, CSS3, Ja
 - Page loader animation with progress bar
 - Scroll reveal animations
 - Fully responsive on mobile, tablet and desktop
+- a whatsapp button. 
+- a up button so it is easier for people to naviagate. (better navigation)
 
 ##  Tech Stack
 - HTML5 — semantic markup
@@ -92,5 +103,16 @@ Web_Dev_Cat2/
 │   ├── search.js        (live search)
 
 │   └── contact.js       (form validation)
+
+├── images/
+
+│   ├── blog        
+
+│   ├── portfolio       
+
+│   ├── services        
+
+│   ├── teams       
+
 
 └── README.md
